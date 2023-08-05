@@ -1,0 +1,11 @@
+node_modules/
+allure-report/
+allure-results/
+package-lock.json
+junit-reports/
+reports/
+wdio-appium.log
+hht.apk
+test/resources/data/~$test-data.xlsx
+logs/
+test/resources/data/post-run.xlsx

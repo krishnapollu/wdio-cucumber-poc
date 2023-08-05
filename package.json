@@ -1,0 +1,48 @@
+{
+  "name": "wdio-cucumber-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "wdio run ./configs/wdio-local.conf.js",
+    "test-headless": "wdio run ./configs/wdio-local-headless.conf.js",
+    "sauce-test": "wdio run ./configs/wdio-sauce.conf.js",
+    "multiremote": "wdio run ./configs/wdio-multiremote-local.conf.js",
+    "sauce-multiremote": "wdio run ./configs/wdio-multiremote-sauce.conf.js",
+    "mocha": "wdio run ./configs/wdio-mocha.conf.js",
+    "report": "allure serve ./reports/local/allure-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/register": "^7.22.5",
+    "@wdio/allure-reporter": "^8.11.0",
+    "@wdio/appium-service": "^8.13.4",
+    "@wdio/cli": "^8.11.2",
+    "@wdio/cucumber-framework": "^8.11.0",
+    "@wdio/junit-reporter": "^8.11.0",
+    "@wdio/local-runner": "^8.11.2",
+    "@wdio/mocha-framework": "^8.11.0",
+    "@wdio/sauce-service": "^8.11.2",
+    "@wdio/selenium-standalone-service": "^8.12.1",
+    "@wdio/spec-reporter": "^8.11.2",
+    "appium": "^2.0.0",
+    "appium-uiautomator2-driver": "^2.29.2",
+    "chromedriver": "^112.0.1",
+    "supertest": "^6.3.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "wdio-chromedriver-service": "^8.1.1",
+    "wdio-cucumberjs-json-reporter": "^5.1.5",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "selenium-webdriver": "^4.10.0",
+    "wdio-timeline-reporter": "^5.1.4"
+  }
+}
