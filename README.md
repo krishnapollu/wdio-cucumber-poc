@@ -130,12 +130,12 @@ For making Allure reports more informative, additional steps / attachments are a
 const report = require('@wdio/allure-reporter')
 ...
 ...
-```
-        report.addStep('STEP: Search results shown');
-        await webClient.takeScreenshot();
+report.addStep('STEP: Search results shown');
+await webClient.takeScreenshot();
 ```
 ### Specific Configs
 Separate config.js need to be maintained for this which will import the common configurations from the `` configs/wdio.shared.conf.js ``
+
 #### a. Web Only Tests - to run in local browsers
 ```
 config.capabilities = [{
@@ -147,29 +147,29 @@ config.services = [
 ]
 ```
 #### b. Mobile Only Tests - to run in local emulators
-  ```
-  config.capabilities = {
-            platformName: 'Android',
-            "appium:deviceName": 'emulator-5554',
-            'appium:app': path.join(process.cwd(), './app.apk'),
-            "appium:platformVersion": '7.1.1',
-            "appium:automationName": 'UIAutomator2',
-            "appium:autoGrantPermissions": true,
-            "appium:idleTimeout": 100000
-        }
-  config.services = [
-    'appium', {
-        args: {
-            address: 'localhost',
-            port: 4723,
-            relaxedSecurity: true,
-            "base-path": '/wd/hub'
-        },
-        command: 'appium',
-        logPath: './'
-    }
-  ]
-  ```
+```
+config.capabilities = {
+          platformName: 'Android',
+          "appium:deviceName": 'emulator-5554',
+          'appium:app': path.join(process.cwd(), './app.apk'),
+          "appium:platformVersion": '7.1.1',
+          "appium:automationName": 'UIAutomator2',
+          "appium:autoGrantPermissions": true,
+          "appium:idleTimeout": 100000
+      }
+config.services = [
+  'appium', {
+      args: {
+          address: 'localhost',
+          port: 4723,
+          relaxedSecurity: true,
+          "base-path": '/wd/hub'
+      },
+      command: 'appium',
+      logPath: './'
+  }
+]
+```
 #### c. Web Only Tests - SauceLabs
 ```
   config.capabilities = [{
