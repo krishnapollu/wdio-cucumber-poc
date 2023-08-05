@@ -23,7 +23,7 @@
     └── package.json
 ```
 ## Clone the repo into the project folder
-`` git clone ``  
+- `` git clone https://github.com/krishnapollu/wdio-cucumber-poc.git ``  
 
 ## Install the project
 - `` npm install ``  
