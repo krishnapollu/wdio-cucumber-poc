@@ -1,11 +1,10 @@
 const { Given, When, Then } = require('@wdio/cucumber-framework');
-const LoginPage = require('../../pageobjects/web/login.page');
-const HomePage = require('../../pageobjects/web/home.page');
 const LoginPageApp = require('../../pageobjects/mobile/Login.page');
+const pg = require('../../pageobjects/web/Google.page')
 
 Given(/^Verify Multiremote App Launch$/, async () => {
     
-    await LoginPage.open();
+    await pg.open();
    
 });
 
