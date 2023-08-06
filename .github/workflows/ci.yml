@@ -12,7 +12,7 @@ jobs:
         - name: Setup Chrome
           uses: browser-actions/setup-chrome@v1
         - name: Install chromedriver
-          run: npm install chromedriver
+          run: npm install chromedriver --save-dev
         - name: Install
           run: npm install
         - name: Test
