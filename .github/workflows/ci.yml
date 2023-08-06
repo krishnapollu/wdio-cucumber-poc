@@ -16,7 +16,7 @@ jobs:
         - name: Install
           run: npm install
         - name: Test
-          run: npm run test
+          run: npm run test-headless
         - uses: actions/upload-artifact@v1
           if: ${{ always() }}
           with:
