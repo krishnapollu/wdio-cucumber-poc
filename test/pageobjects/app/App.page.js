@@ -8,4 +8,4 @@ class App extends Page {
         await expect(androidClient.$(Locators.loginpage.logo)).toBeDisplayed()
         console.log('Login done...');
     }
-} module.exports = new Login();
+} module.exports = new App();
