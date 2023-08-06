@@ -9,8 +9,10 @@ jobs:
         - uses: actions/setup-node@v1
           with:
             node-version: 18
-        - name: Setup Chrome
+        - name: Setup Chrome v112
           uses: browser-actions/setup-chrome@v1
+          with:
+            chrome-version: 1109224
         - name: Install chromedriver
           run: npm install chromedriver --save-dev
         - name: Install
