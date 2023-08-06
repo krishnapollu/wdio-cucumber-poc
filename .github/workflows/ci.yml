@@ -32,7 +32,7 @@ jobs:
           if: always()
           id: allure-report
           with:
-            token: ${{ secrets.MAVEN_PUBLISH }}
+            token: ${{ secrets.DEPLOY_TOKEN }}
             WORKFLOW_ID: ci.yml
             allure_results: reports/local/allure-results
             gh_pages: gh-pages
@@ -43,7 +43,7 @@ jobs:
           if: always()
           uses: peaceiris/actions-gh-pages@v2
           env:
-            PERSONAL_TOKEN: ${{ secrets.MAVEN_PUBLISH }}
+            PERSONAL_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
             PUBLISH_BRANCH: gh-pages
             PUBLISH_DIR: allure-history
   
@@ -51,7 +51,7 @@ jobs:
           if: always()
           uses: Sibz/github-status-action@v1
           with: 
-              authToken: ${{secrets.MAVEN_PUBLISH}}
+              authToken: ${{secrets.DEPLOY_TOKEN}}
               context: 'Test Results Link'
               state: 'success'
               sha: ${{ github.sha }}
