@@ -7,7 +7,7 @@ class Google extends Page {
 
     async doSearch(str){
 
-        await webClient.$(Locators.googleSearch.search_txtarea).type(str);
+        await webClient.$(Locators.googleSearch.search_txtarea).setValue(str);
         await webClient.$(Locators.googleSearch.search_submit).click();
     }
 
