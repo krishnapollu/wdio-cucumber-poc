@@ -316,4 +316,5 @@ config.services = [
         ├── multiremote-local/
         └── multiremote-sauce/ 
 ```
+- Sample report [here](https://krishnapollu.github.io/wdio-cucumber-poc/)
     
