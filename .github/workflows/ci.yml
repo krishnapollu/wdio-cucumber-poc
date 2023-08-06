@@ -16,7 +16,7 @@ jobs:
         - name: Chrome Version check
           run: google-chrome --version
         - name: Install chromedriver
-          run: npm install chromedriver --save-dev
+          run: npm install chromedriver@115 --save-dev
         - name: Install
           run: npm install
         - name: Test
