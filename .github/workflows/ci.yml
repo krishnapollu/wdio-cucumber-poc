@@ -11,9 +11,6 @@ jobs:
             node-version: 18
         - name: Setup Chrome
           uses: browser-actions/setup-chrome@v1
-          with:
-            chrome-version: beta
-            id: setup-chrome
         - name: Install chromedriver
           run: npm install chromedriver
         - name: Install
