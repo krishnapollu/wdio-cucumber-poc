@@ -13,6 +13,8 @@ jobs:
           uses: browser-actions/setup-chrome@v1
           with:
             chrome-version: 1109227
+        - name: Chrome Version check
+          run: google-chrome --version
         - name: Install chromedriver
           run: npm install chromedriver --save-dev
         - name: Install
