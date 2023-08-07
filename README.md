@@ -1,5 +1,5 @@
 # **wdio-cucumber-poc**  
-  
+  [![tested with webdriver.io](https://img.shields.io/badge/tested%20with-webdriver.io-%23ea5906)](https://webdriver.io/)
 ## Project Structure
 
 ```
