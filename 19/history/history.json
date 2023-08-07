@@ -1,1 +1,0 @@
-{"1d690297b6b8667a338fc92a599857db":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"506cbe1d680121cf","reportUrl":"https://krishnapollu.github.io/wdio-cucumber-poc/19//#testresult/506cbe1d680121cf","status":"passed","time":{"start":1691350083366,"stop":1691350086313,"duration":2947}}]}}
