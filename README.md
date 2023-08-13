@@ -49,7 +49,7 @@ All the common configurations are placed in `` configs/wdio.shared.conf.js ``
 #### 2. Test framework to be used
 `` framework: 'cucumber', // can be cucumber or mocha or jasmine ``
 #### 3. CucumberOpts
-```
+```js
 cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
         require: ['./test/features/step-definitions/*.js'],
@@ -77,7 +77,7 @@ cucumberOpts: {
 ```
 #### 4. Hooks
 Only required hooks need to be implemented
-```
+```js
  onPrepare: function (config, capabilities) {
         setup.extractExcelData();
     },
@@ -91,7 +91,7 @@ onComplete: function(exitCode, config, capabilities, results) {
 ```
 #### 5. Reporters
 Multiple reporters of your choie can be intergrated to the suite by just adding the name (and some configs like report directory path which is optional) of the reporter
-```
+```js
 config.reporters = [
     [
         'spec', {
@@ -126,7 +126,7 @@ config.reporters = [
 ]
 ```
 For making Allure reports more informative, additional steps / attachments are added in the pageobjects / step definitions / specs files as below:
-```
+```js
 const report = require('@wdio/allure-reporter')
 ...
 ...
@@ -137,7 +137,7 @@ await webClient.takeScreenshot();
 Separate config.js need to be maintained for this which will import the common configurations from the `` configs/wdio.shared.conf.js ``
 
 #### a. Web Only Tests - to run in local browsers
-```
+```js
 config.capabilities = [{
   browserName: 'chrome'
 }]
@@ -147,7 +147,7 @@ config.services = [
 ]
 ```
 #### b. Mobile Only Tests - to run in local emulators
-```
+```js
 config.capabilities = {
           platformName: 'Android',
           "appium:deviceName": 'emulator-5554',
@@ -171,7 +171,7 @@ config.services = [
 ]
 ```
 #### c. Web Only Tests - SauceLabs
-```
+```js
   config.capabilities = [{
       browserName: 'chrome',
       'sauce:options': {
@@ -188,7 +188,7 @@ config.services = [
   ]
 ```
 #### d. Mobile Only Tests - SauceLabs
-```
+```js
 //sauce labs details
 config.user = ''
 config.key = ''
@@ -217,7 +217,7 @@ config.services = [
 ```
 #### e. Web + Mobile Tests - Local Browser and Emulator(s)
 These are called Multiremote tests where multiple browser / driver instances are used in a single spec / worker; which can be multiple browsers or multiple devices (or emulators) or a combination of both. Here we are looking into a browser + emulator combo.
-```
+```js
 config.capabilities = {
     webClient: {
         capabilities: {
@@ -257,7 +257,7 @@ config.services = [
 ]
 ```
 #### f. Web + Mobile Tests - SauceLabs Browser and Emulator(s)
-```
+```js
 //sauce labs details
 config.user = ''
 config.key = ''
@@ -304,7 +304,7 @@ config.services = [
 ## Reports
 - Multiple report types generated per run type - Allure, Junit, Cucumber-JSON, Timeline
 - Reports will be generated in below path(s):
- ``` 	
+ ```
 └── wdio-cucumber-poc/
     └── reports/
         ├── local/
