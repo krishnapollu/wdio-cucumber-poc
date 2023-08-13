@@ -305,7 +305,7 @@ config.services = [
 I was able to maintain my e2e suite (in cucumber) as well as data driven suite (in mocha) alongside in the same project there by reusing all my page objects as such. Lets see how the config and test specs for the data driven tests look like.
 
 #### Mocha Config
-```
+```js
 // configs/wdio-mocha.conf.js
 
 config.framework = 'mocha'
@@ -316,7 +316,7 @@ config.mochaOpts = {
 ```
 
 #### Test Spec File
-```
+```js
  context('Flows (Sheet1)', () => {
         Object.keys(testdata1.data).forEach((flow) => { //runs the test for each key present in testdata1.data
             it('Invoke '+flow, async () => {
