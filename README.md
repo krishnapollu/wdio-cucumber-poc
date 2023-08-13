@@ -1,5 +1,5 @@
 # **wdio-cucumber-poc**  
-  
+  [![tested with webdriver.io](https://img.shields.io/badge/tested%20with-webdriver.io-%23ea5906)](https://webdriver.io/)
 ## Project Structure
 
 ```
@@ -301,6 +301,32 @@ config.services = [
     'sauce',
 ]
 ```
+## Data Driven Tests with Mocha
+I was able to maintain my e2e suite (in cucumber) as well as data driven suite (in mocha) alongside in the same project there by reusing all my page objects as such. Lets see how the config and test specs for the data driven tests look like.
+
+#### Mocha Config
+```
+// configs/wdio-mocha.conf.js
+
+config.framework = 'mocha'
+config.mochaOpts = {
+    ui: 'bdd',
+    timeout: 60000
+}
+```
+
+#### Test Spec File
+```
+ context('Flows (Sheet1)', () => {
+        Object.keys(testdata1.data).forEach((flow) => { //runs the test for each key present in testdata1.data
+            it('Invoke '+flow, async () => {
+                await sm.doSomething(global.testData.data[flow]);
+                util.storeDataToFile('data', flow, 'status', 'PASS');
+            });
+        });
+    });
+```
+
 ## Reports
 - Multiple report types generated per run type - Allure, Junit, Cucumber-JSON, Timeline
 - Reports will be generated in below path(s):
@@ -316,4 +342,5 @@ config.services = [
         ├── multiremote-local/
         └── multiremote-sauce/ 
 ```
+- Sample report [here](https://krishnapollu.github.io/wdio-cucumber-poc/)
     
