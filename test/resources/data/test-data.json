@@ -1,0 +1,24 @@
+{
+    "data": {
+        "Flow01": {
+            "Scenario": "Flow01",
+            "keyword": "krishnapollu",
+            "status": ""
+        },
+        "Flow02": {
+            "Scenario": "Flow02",
+            "keyword": "webdriverio",
+            "status": ""
+        },
+        "Flow03": {
+            "Scenario": "Flow03",
+            "keyword": "github",
+            "status": ""
+        },
+        "Flow04": {
+            "Scenario": "Flow04",
+            "keyword": "facebook",
+            "status": ""
+        }
+    }
+}

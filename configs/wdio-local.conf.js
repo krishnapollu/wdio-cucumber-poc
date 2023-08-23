@@ -9,7 +9,7 @@ const setup = require('./GlobalConfigs');
 const { config } = require('./wdio.shared.conf');
 
 config.specs = [
-    '../test/**/web/Flow01.feature'
+    '../test/**/web/*.feature'
 ]
 
 config.capabilities = [{

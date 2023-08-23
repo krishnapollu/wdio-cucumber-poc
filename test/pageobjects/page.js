@@ -2,6 +2,8 @@
 * main page object containing all methods, selectors and functionality
 * that is shared across all page objects
 */
+require('dotenv').config();
+
 module.exports = class Page {
    
     constructor(){
@@ -11,7 +13,8 @@ module.exports = class Page {
     }
     async open () {
         
-        return webClient.url(global.appUrl);
+        await webClient.url(process.env.APP_URL);
+        await webClient.maximizeWindow();
     }
 
 }
