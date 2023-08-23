@@ -15,7 +15,7 @@ config.specs = [
 config.capabilities = [{
     browserName: 'chrome',
     'goog:chromeOptions': {
-        args: ['headless=new', 'disable-gpu']
+        args: ['headless=new', 'disable-gpu', 'window-size=1366,784']
     },
 }]
 config.services = [
