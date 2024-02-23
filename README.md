@@ -301,6 +301,40 @@ config.services = [
     'sauce',
 ]
 ```
+
+#### g. Web only tests - Browserstack
+```js
+    //browserstack creds
+    config.user = ''
+    config.key = ''
+    config.hostname = 'hub.browserstack.com'
+
+    config.capabilities = [{
+        // capabilities for browserstack browser web tests
+        browserName: 'chrome', // or "firefox", "microsoftedge", "safari"
+        strictSSL: false,
+        'bstack:options': {
+            browserVersion: '120.0',
+            os: 'Windows',
+            osVersion: '10'
+        }
+    }]
+
+    config.services = [
+            ['browserstack', {
+                testObservability: true,
+                acceptSslCerts: true,
+                acceptInsecureCerts: true,
+                testObservabilityOptions: {
+                    projectName: "wdio-cucumber-poc",
+                    buildName: "Smoke Test"
+                },
+                browserstackLocal: false
+            }]
+            ...
+        ]
+
+```
 ## Data Driven Tests with Mocha
 I was able to maintain my e2e suite (in cucumber) as well as data driven suite (in mocha) alongside in the same project there by reusing all my page objects as such. Lets see how the config and test specs for the data driven tests look like.
 
