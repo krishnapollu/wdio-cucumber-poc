@@ -14,8 +14,8 @@ config.specs = [
 ]
 
 //browserstack creds
-config.user = ''
-config.key = ''
+config.user = 'krishnasubrahman_weSG9b'
+config.key = '1J3pZft15czUNMcAyM9t'
 config.hostname = 'hub.browserstack.com'
 
 config.capabilities = [{
